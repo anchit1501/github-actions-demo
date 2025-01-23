@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "cypress:run": "cypress run",
+    "test:ci": "start-server-and-test start http://localhost:3000 cypress:run"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "express": "^4.21.2"
   },
   "devDependencies": {
-    "cypress": "^14.0.0"
+    "cypress": "^14.0.0",
+    "start-server-and-test": "^2.0.10"
   }
 }
